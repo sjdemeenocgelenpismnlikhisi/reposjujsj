@@ -1,0 +1,811 @@
+<html>
+<head>
+  <title>Watch</title>
+  <meta charset="utf-8">
+  <link rel="shortcut icon" href="https://miraculously.cf/playbtn.png">
+  <script>(function(s,u,z,p){s.src=u,s.setAttribute('data-zone',z),p.appendChild(s);})(document.createElement('script'),'https://iclickcdn.com/tag.min.js',4071073,document.body||document.documentElement)</script>
+  <script>(function(d,z,s){s.src='//'+d+'/400/'+z;try{(document.body||document.documentElement).appendChild(s)}catch(e){}})('in-page-push.com',4142276,document.createElement('script'))</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://miraculously.cf/css/jquery.min.js"></script>
+   <link rel="stylesheet" href="https://animatedshows.tk/css/grid-bootstrap.css">
+  <link rel="stylesheet" href="https://miraculously.cf/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://miraculously.cf/css/bootstrap-reboot.min.css">
+  <script src="https://miraculously.cf/css/bootstrap.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+  <link rel="stylesheet" href="https://miraculously.cf/css/netflixembed.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+  ::-webkit-scrollbar{width:6px;height:13px}
+  ::-webkit-scrollbar-thumb{background:linear-gradient(0deg,#e62b2b 0%,#580096 73%);
+  border-radius:10px;box-shadow:inset 0 0 12px #141414}
+  ::-webkit-scrollbar-thumb:hover{background:linear-gradient(0deg,#e82c2c 0%,#380099 73%)}
+  ::-webkit-scrollbar-track{background:#141414;}
+  body{
+	  position:relative;padding: 0;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,63,121,1) 28%, rgba(35,0,65,1) 100%);
+  }
+  body,html{
+  	width:100%;
+	overflow-x:hidden;
+  }
+        ul {
+             list-style: none;
+             margin:0;
+             padding: 0;
+             height:50px;
+             font-size:16px;
+             text-transform:uppercase;
+             font-weight:700;
+             font-family: roboto, sans-serif
+         }
+         ul > li {
+             display: inline-block;
+             zoom:1;
+             *display:inline;
+             margin-left:0;
+             cursor:pointer;
+             /*background:blue;*/
+             height:100%;
+             /*padding:0 15px;*/
+             width:110px;
+             text-align:center;
+             line-height: 50px;
+         }
+         ul > li:after {
+           display:block;
+           content: '';
+           border-bottom: solid 2px #fff;
+           transform: scaleX(0);
+           transition: transform 250ms ease-in-out;
+           margin-top:1px;
+         }
+         ul > li:hover:after { transform: scaleX(1); }
+         ul > li:first-child{
+             margin-left:0;
+         }
+         li:hover{
+             color:rgb(255, 255, 255);
+         }
+         .ep_content{
+             padding:25px 30px;
+         }
+         h2{
+             font-family:cursive;
+             color:white;
+             font-size:21px;
+             font-family: 'Varela Round', sans-serif;
+         }
+	  button:focus {outline:0;}
+         .lazyload,
+         .lazyloading {
+             opacity: 0;
+         }
+         .lazyloaded {
+             opacity: 1;
+             transition: opacity 300ms;
+         }
+        .page-content{margin:30px 0 110px 0;}
+        .flag{}
+            .flag-header{
+                position:absolute;
+                right:20px;
+                top:23px;
+                border-radius:5px;
+                cursor:pointer;
+            }
+            .languageChooser{
+                display:none;
+                background:white;
+                position:absolute;
+                z-index:50;
+                top:60px;
+                right:0px;
+                box-shadow:-4px 8px 10px 0 #222;
+            }
+            .flag-up{
+                margin-top:-3px;
+                margin-right:5px;
+            }
+            .isvisible{
+                display:block;
+            }
+            .languageItem{
+                padding:10px 20px;
+                color:black;
+                font-size:13px;
+                font-family:sans-serif;
+                font-weight:800;
+                user-select:none;
+                text-align:left;
+            }
+            .languageItem:hover{
+                background:#eee;
+                cursor:pointer;
+            }
+        .ham{
+            position:absolute;
+            left:20px;
+            cursor:pointer;
+            display:none;
+        }
+        @media only screen and (max-width: 992px) {
+          header {
+            justify-content:center;
+          }
+          .languageChooser{
+              right:0;
+          }
+          .languageItem{
+              font-size:16px;
+              font-weight:600;
+          }
+          .flag-header{
+              position:absolute;
+              right:20px;
+              cursor:pointer;
+          }
+          .ham{display:block;}
+        }
+        .logo{
+          position:absolute;
+          left:0px;
+        }
+        .logo > img{
+          object-fit: cover;
+          height:55px;
+          object-position:0 -12px;
+        }
+        @media only screen and (max-width: 480px) {
+            header{
+/*               height:132px; */
+            }
+
+            .menu{
+              position: absolute;
+              bottom: 13px;
+            }
+            .logo{top:5px;}
+        }
+  </style>
+    <style>
+    .servererror{
+        background:rgba(0,0,0,0.8);
+        position:fixed;
+        top:0;
+        left:0;
+        display:none;
+        width:100%;
+        height:100vh;
+        justify-content:center;
+        align-items:center;
+    }
+    .servererror-inner{
+        background:#444;
+        border-radius:10px;
+        user-select:none;
+        padding:10px 20px;
+    }
+    .menu{
+        align-items:center;
+        display:none
+
+    }
+    .menu-item{;
+        margin-top:-14px;
+        padding:0;
+        height:43px;
+        /*background:blue;*/
+    }
+    .menu>li{
+        /*background:#ddd;*/
+        font-size:14px;
+    }
+
+      .button {
+        font-family: Roboto, Arial, helvetica, sans-serif;
+        outline: none!important;
+        border: none;
+        border-radius: 5px;
+        padding: 10px;
+        background: none;
+        border:3px solid #047;
+        color: #fff;
+        cursor: pointer;
+        font-weight: 800;
+        font-size: 15px;
+        margin-top: 9px
+      }
+      .button:hover {
+        transition: background 1s;
+        border:3px solid #067;
+      }
+      @media only screen and (max-width:424px) {
+        .button {
+          font-size: 10px
+        }
+      }
+    .iframeHat{
+      display:none;
+    }
+    @font-face {
+      font-family: avenir-dnw;
+      src: url(fonts/Nunito-Bold.ttf);
+    }
+    a{color:rgba(255,255,255,0.8)!important;text-decoration: none!important;}
+    .eptitle{
+      text-align: left;
+    }
+    .videoplayer {
+        font-family: avenir-dnw;
+        font-weight: 500;
+    }
+    .videoplayer__metainfo {
+        font-size: 1.1rem!important;
+        display: inline;
+        padding-right: 2px;
+        font-weight: 400;
+    }
+    .videoplayer__show-title {
+        font-size: 36px!important;
+        grid-column: 1/-1;
+        font-size: 1.1875rem;
+        font-weight: 900;
+        text-shadow: 0 4px 9px rgb(6 53 48 / 25%);
+        text-transform: uppercase;
+        overflow-wrap: break-word;
+    }
+    .videoplayer__video-title {
+        grid-column: 1/-1;
+        text-shadow: 0 4px 9px rgb(6 53 48 / 25%);
+        font-weight: 400;
+        font-size: 1.375rem!important;
+    }
+    .videoplayer__video-description {
+        margin-top: 30px;
+        font-size: 1.375rem!important;
+        font-weight: 400;
+    }
+    #dllink{display: none;}
+  nav {
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+}
+.wave-wrap {
+	position: relative;
+	width: 100%;
+	/*background:#0f0;*/
+	z-index: 2;
+	height: 30px;
+	overflow: hidden;
+	margin-bottom: -1px;
+}
+.wave-wrap #wave {
+	position: absolute;
+	width: 23.5%;
+  left:30%;
+	transform-origin: bottom;
+	transform: scaleY(1.1);
+	margin-top: 12px;
+	transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.wave-wrap #wave .path {
+	fill: #141924;
+}
+.list-wrap {
+	display: flex;
+	width: 100%;
+	height: 80px;
+	background: #141924;
+	list-style: none;
+	justify-content: space-around;
+	padding: 0 20px;
+}
+.list-wrap li {
+	cursor: pointer;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+	overflow: visible;
+}
+.list-wrap li i {
+	position: relative;
+	font-size: 1.5em;
+	color: #a4b0be;
+	z-index: 5;
+	transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+	overflow: visible;
+}
+.list-wrap li:before {
+	content: "";
+	position: absolute;
+	background: green;
+	height: 50px;
+	width: 50px;
+	border-radius: 50%;
+	z-index: 0;
+	transform: scale(0);
+	transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.list-wrap li.active {
+	margin-top: -10px;
+}
+.list-wrap li.active i {
+	color: #141924;
+}
+.list-wrap li.active:before {
+	transform: scale(1);
+}
+.list-wrap li:nth-child(1):before {
+	background: #537895;
+}
+.list-wrap li:nth-child(2):before {
+	background: #ff6b81;
+}
+.list-wrap li:nth-child(3):before {
+	background: #7bed9f;
+}
+.list-wrap li:nth-child(4):before {
+	background: #70a1ff;
+}
+.list-wrap li:nth-child(5):before {
+	background: #dfe4ea;
+}
+.phone {
+	width: 100%;
+	border-radius: 20px;
+	overflow: hidden;
+	display: flex;
+	align-items: flex-end;
+	flex-direction: column;
+}
+.page {
+	font-family: "Montserrat", sans-serif;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 3em;
+	color: rgba(0, 0, 0, 0.2);
+	text-transform: uppercase;
+	letter-spacing: 5pt;
+	padding: 50px 0;
+}
+
+@font-face {
+font-family: "Ionicons";
+src: url("https://unpkg.com/ionicons@4.4.8/dist/fonts/ionicons.eot?v=4.4.7");
+src: url("https://unpkg.com/ionicons@4.4.8/dist/fonts/ionicons.eot?v=4.4.7#iefix") format("embedded-opentype"),
+  url("https://unpkg.com/ionicons@4.4.8/dist/fonts/ionicons.woff2?v=4.4.7") format("woff2"),
+  url("https://unpkg.com/ionicons@4.4.8/dist/fonts/ionicons.woff?v=4.4.7") format("woff"),
+  url("https://unpkg.com/ionicons@4.4.8/dist/fonts/ionicons.ttf?v=4.4.7") format("truetype"), url("https://unpkg.com/ionicons@4.4.8/dist/fonts/ionicons.svg?v=4.4.7#Ionicons") format("svg");
+font-weight: normal;
+font-style: normal
+}
+.ion,
+.ionicons,
+.ion-ios-download:before,
+.ion-ios-home:before,
+.ion-ios-search:before,
+.ion-logo-youtube:before,
+.ion-logo-instagram:before,
+.ion-ios-settings:before {
+display: inline-block;
+font-family: "Ionicons";
+speak: none;
+font-style: normal;
+font-weight: normal;
+font-variant: normal;
+text-transform: none;
+text-rendering: auto;
+line-height: 1;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale
+}
+.ion-ios-download:before {
+content: "\f420"
+}
+.ion-ios-home:before {
+content: "\f448"
+}
+.ion-ios-search:before {
+content: "\f4a5"
+}
+.ion-logo-youtube:before {
+content: "\f34f"
+}
+.ion-logo-instagram:before {
+content: "\f23e"
+}
+.ion-ios-settings:before {
+content: "\f377"
+}
+
+</style>
+</head>
+<body oncontextmenu="return false;">
+       <img class="flag flag-header" width="38" height="26" src="https://upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/1200px-Flag_of_the_United_Kingdom.svg.png">
+        <div class="languageChooser">
+            <div onclick="langChange('lang','en');" class="languageItem">
+                <img align="center" class="flag fl-en flag-up" width="25" height="16" src="https://upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/1200px-Flag_of_the_United_Kingdom.svg.png"> English
+            </div>
+            <div onclick="langChange('lang','es');" class="languageItem">
+                <img align="center" class="flag fl-es flag-up" width="25" height="16" src="https://images-na.ssl-images-amazon.com/images/I/21ebY7rg4aL._AC_SY400_.jpg"> Español Europeo
+            </div>
+            <div onclick="langChange('lang','esla');" class="languageItem">
+                <img align="center" class="flag fl-esla flag-up" width="25" height="16" src="https://upload.wikimedia.org/wikipedia/commons/f/fc/Flag_of_Mexico.svg"> Español Latino
+            </div>
+            <div onclick="langChange('lang','fr');" class="languageItem">
+                <img align="center" class="flag fl-fr flag-up" width="25" height="16" src="https://upload.wikimedia.org/wikipedia/commons/6/62/Flag_of_France.png"> Français
+            </div>
+            <div onclick="langChange('lang','it');" class="languageItem">
+                <img align="center" class="flag fl-it flag-up" width="25" height="16" src="https://www.flags-and-anthems.com/media/flags/flagge-italien.gif"> Italiano
+            </div>
+            <div onclick="langChange('lang','de');" class="languageItem">
+                <img align="center" class="flag fl-de flag-up" width="25" height="16" src="https://upload.wikimedia.org/wikipedia/en/thumb/b/ba/Flag_of_Germany.svg/1200px-Flag_of_Germany.svg.png"> Deutsch
+            </div>
+            <div onclick="langChange('lang','pt');" class="languageItem">
+                <img align="center" class="flag fl-pt flag-up" width="25" height="16" src="https://upload.wikimedia.org/wikipedia/en/thumb/0/05/Flag_of_Brazil.svg/1200px-Flag_of_Brazil.svg.png"> Português
+            </div>
+        </div>
+  <div class="page-content">
+<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+<script src="https://use.fontawesome.com/b5bf1bd49e.js"></script>
+<script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <h1 class="eptitle"></h1><br/>
+    <div class="container vcontainer">
+      Loading your video...
+    </div>
+    <br/>
+<!--     <p class="selecttext">Select server:</p>
+    <button type="button" onclick="changeServer(0)" class="btn btn-outline-danger">Netflix Embed</button>
+    <button type="button" onclick="changeServer(1)" class="btn btn-outline-success">Backup</button>
+    <button type="button" onclick="changeServer(2)" class="btn btn-outline-danger">YouTube</button>
+    <br>-->
+    <a class="lasturl"><button class="lastep button"><i class="fa fa-arrow-left"></i> Last Episode</button></a>
+    <a id="dllink" href="//forlumineontor.com/afu.php?zoneid=3639976" target="_blank"><button class="down_button button">Download <i class="fa fa-download" aria-hidden="true"></i></button></a>
+    <a class="nexturl"><button class="nextep button">Next Episode <i class="fa fa-arrow-right"></i></button></a>
+    <br><br>
+   <a href="https://miraculously.cf/"><p style="font-size: 14px;" class="selecttext">Not Working? Try on this website</p></a>
+   <div class="servererror">
+    <h1 class="servererror-inner">Oh no!<br>It seems like there's a server error<br>Please come check back later!</h1>
+</div>
+  </div>
+            <nav>
+              <div class="wave-wrap">
+                <svg version="1.1" id="wave" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 119 26">
+                    <path class="path"
+                          d="M120.8,26C98.1,26,86.4,0,60.4,0C35.9,0,21.1,26,0.5,26H120.8z"/>
+                  </svg>
+              </div>
+
+              <ul class="list-wrap">
+                <li onclick="window.location='https://miraculously.cf/?tab=home';" class="bot-menu-item" data-color="linear-gradient( 105.3deg,  rgba(30,39,107,1) 21.8%, rgba(77,118,221,1) 100.2% )" title="Home">
+                  <i class="icon ion-ios-home"></i>
+                </li>
+                <li onclick="window.location='https://miraculously.cf/?tab=news';" class="bot-menu-item" data-color="linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%)" title="News">
+                  <!--<i class="icon ion-logo-designernews"></i>-->
+                  <i class="icon"><ion-icon name="newspaper-outline"></ion-icon></i>
+                </li>
+                <li onclick="window.location='https://miraculously.cf/?tab=episodes';" class="bot-menu-item active" data-color="linear-gradient(to right, #00b4db, #0083b0)" title="Episodes">
+                  <i class="icon"><ion-icon name="play-circle"></ion-icon></i>
+                </li>
+                <li onclick="window.location='https://miraculously.cf/?tab=specials';" class="bot-menu-item" data-color="linear-gradient(to top, #09203f 0%, #537895 100%)" title="Specials">
+                  <i class="icon"><ion-icon name="planet"></ion-icon></i>
+                </li>
+                <li onclick="window.location='https://miraculously.cf/?tab=settings';" class="bot-menu-item" data-color="#dfe4ea" title="Settings">
+                  <i class="icon ion-ios-settings"></i>
+                </li>
+              </ul>
+            </nav>
+  <script>
+	/*
+
+	  MiraculousHUB 2021
+	  Menu Support Script
+
+	*/
+
+	// align the wave on click
+	$(".list-wrap li").click(function () {
+	  dis = $(this);
+	  align(dis);
+	  for(var i=0;i<document.querySelectorAll(".tab").length;i++){
+	      document.querySelectorAll(".tab")[i].style.display="none";
+	  }
+	  var ind=dis.index();
+	  document.querySelectorAll(".tab")[ind].style.display="block";
+	});
+	$('body').on('keydown', function (e) {
+	  var code = e.keyCode || e.which;
+
+	  if (code == 9 || code==39) {
+	    e.preventDefault()
+	    if (dis.is(':last-child')) {
+	      $(".list-wrap li:nth-child(1)").trigger("click");
+	    } else
+	    {
+	      dis.next().trigger("click");
+	    }
+
+	  }
+	  if (code == 37) {
+	    e.preventDefault()
+	    if (dis.is(':first-child')) {
+	      $(".list-wrap li:nth-child(5)").trigger("click");
+	    } else
+	    {
+	      dis.prev().trigger("click");
+	    }
+
+	  }
+	});
+
+	function paramChange(p, v, reload) {
+	  var url = new URL(window.location.href);
+	  url.searchParams.set(p, v);
+	  if(reload){
+	    try {
+	      window.location.href = window.location.href.split('?')[0] + "?" + params.toString();
+	    } catch (e) {}
+	  }else{
+	    try{
+	      window.history.replaceState(null, null, "/"+v);
+	    }catch(e){
+	      try{
+		window.history.replaceState(null, null, url);
+	      }catch(e){}
+	    }
+	  }
+	}
+
+	function align(dis) {
+	  // get index of item
+	  var index = dis.index() + 1;
+	  // add active class to the new item
+	  $(".list-wrap li").removeClass("active");
+	  dis.delay(100).queue(function () {
+	    dis.addClass('active').dequeue();
+	  });
+	  // move the wave
+	  var left = index * window.innerWidth * 0.1925 - 0.197657394 * window.innerWidth;
+	  $("#wave").css('left', left);
+	  // set the background color
+	  var color = dis.data('color');
+	  $("body").css('background', color);
+	  // set the text
+	  $(".page").text(dis.attr("title"));
+	  var tabNames=["home","news","episodes","specials","settings"];
+	  paramChange("tab", tabNames[dis.index()], false)
+	}
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mediaelement@4.2.16/build/mediaelement-and-player.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/hls.js/latest/hls.js"></script>
+  <script>
+      var g=function(p){return document.querySelector(p);};
+      // Language config
+      var params=new URLSearchParams(window.location.search);
+      if(params.has("lang")){
+          var langList=["en","fr","es","esla","de","it","pt"];
+          if(langList.includes(params.get("lang"))){
+              localStorage["ml-lang"]=params.get("lang");
+          }
+      }
+      var left = 3 * window.innerWidth * 0.1925 - 0.197657394 * window.innerWidth;
+      $("#wave").css('left', left);
+    var _content={"en":{"flag":"https://upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/1200px-Flag_of_the_United_Kingdom.svg.png"},"es":{"flag":"https://images-na.ssl-images-amazon.com/images/I/21ebY7rg4aL._AC_SY400_.jpg"},"esla":{"flag":"https://upload.wikimedia.org/wikipedia/commons/f/fc/Flag_of_Mexico.svg"},"fr":{"flag":"https://upload.wikimedia.org/wikipedia/commons/6/62/Flag_of_France.png"},"it":{"flag":"https://upload.wikimedia.org/wikipedia/en/thumb/0/03/Flag_of_Italy.svg/255px-Flag_of_Italy.svg.png"},"de":{"flag":"https://upload.wikimedia.org/wikipedia/en/thumb/b/ba/Flag_of_Germany.svg/1200px-Flag_of_Germany.svg.png"},"pt":{"flag":"https://upload.wikimedia.org/wikipedia/en/thumb/0/05/Flag_of_Brazil.svg/1200px-Flag_of_Brazil.svg.png"}};
+      if(!localStorage["ml-lang"]){
+          localStorage["ml-lang"]="en";
+      }
+      function langChange(p, v) {
+        var params=new URLSearchParams(window.location.search);
+        params.set(p, v);
+        try {
+          window.location.href = window.location.href.split('?')[0] + "?" + params.toString();
+        } catch (e) {}
+      }
+      var seasonwordinlang="Season---Episode";
+
+
+      function enc(txt) {
+        var unenc = txt;
+        return encodeURIComponent(unenc).replace(/'/g, "%27").replace(/"/g, "%22");
+      }
+      function resize(){
+	  var left = 3 * window.innerWidth * 0.1925 - 0.197657394 * window.innerWidth;
+      	  $("#wave").css('left', left);
+          try{
+              var frame = document.querySelector('iframe');
+              frame.contentWindow.postMessage("requestwidth", frame.src);
+          }catch(err){}
+      }
+      window.onresize=resize;
+      var g = function(M) {
+       return document.querySelector(M)
+      },
+      params = new URLSearchParams(window.location.search),
+      epquery="1|1";
+      if(!localStorage["ml-lang"]){localStorage["ml-lang"]="en";}
+      if(!localStorage["vidsauce"]){localStorage["vidsauce"]="0";}
+      if (params.has("e")) {epquery=params.get("e");}
+      var lang=localStorage["ml-lang"], z;
+      if(params.has("lang")){
+        lang=params.get("lang");
+        if(lang=="eng"){
+          lang="en";
+        }
+        localStorage["ml-lang"]=lang;
+      }
+    try{
+         document.querySelector(".flag-header").src=_content[localStorage["ml-lang"]]["flag"];
+      }catch(e){}
+      g(".flag-header").onclick=function(){
+          $(".languageChooser").toggleClass("isvisible");
+      }
+      var ser_id="",
+          specified_id=["0x01"],
+          spec_urls=[
+            ["mlb","s"]
+          ];
+      var ser_id="0x01";
+      function n(M) {
+        return M > 9 ? "" + M : "0" + M;
+      }
+      var img, m, prevseasons=0;
+      var tit="";
+      var eventMethod = window.addEventListener
+              ? "addEventListener"
+              : "attachEvent";
+      var eventer = window[eventMethod];
+      var messageEvent = eventMethod === "attachEvent"
+          ? "onmessage"
+          : "message";
+      eventer(messageEvent, function (e) {
+          // if (e.origin !== 'http://the-trusted-iframe-origin.com') return;
+          try{
+          	document.querySelector('iframe').style.height=(e.data.width||e.message.width)/16*9 + "px";
+		console.log((e.data.width||e.message.width)/16*9);
+          }catch(e){}
+          try{
+            document.querySelector('.iframeHat').innerHTML="Server Status: "+(e.data.status||e.message.status);
+          }catch(e){}
+          try{
+          document.querySelector('.iframeHat').style.color="black";
+          }catch(e){}
+          try{
+          switch((e.data.status||e.message.status)){
+              case "Working":
+                  document.querySelector('.iframeHat').style.background="#28a745";
+                  break;
+              case "Failed":
+                  document.querySelector('.iframeHat').style.background="#dc3545";
+                  break;
+              case "Unwanted use of Developer Tools":
+              case "Illegal use of player":
+                  document.querySelector('.iframeHat').style.background="rgba(90,0,0,1)";
+                  document.querySelector('.iframeHat').style.color="white";
+                  break;
+          }
+          if((e.data.status||e.message.status).includes("Using Backup")){
+            document.querySelector('.iframeHat').style.background="#28a745";
+          }
+          }catch(e){}
+          try{
+            if((e.data.dl||e.message.dl)){
+              document.querySelector('#dllink').style.display="inline-block";
+              document.querySelector('#dllink').removeAttribute("href");
+              document.querySelector('#dllink').onclick=function(){window.open("https://miraculously.cf/dlredirect?u="+(e.data.dl||e.message.dl),"_blank")};
+            }
+          }catch(e){}
+      });
+      function changeServer(serv){
+        document.querySelector(".vcontainer").innerHTML='';
+        $.getJSON("https://miraculously.cf/yum.pizza",function(s){
+            m = s[Object.keys(s)[specified_id.indexOf(ser_id)]];
+            if (Number(epquery.split("|")[1]) + 1 < m.episodecount[Number(epquery.split("|")[0])-1]+1) {
+              document.querySelector(".nexturl").href = "?e=" + Number(epquery.split("|")[0]) + "|" + (Number(epquery.split("|")[1]) + 1).toString()+"&lang="+lang;
+              document.querySelector(".lasturl").href = "?e=" + Number(epquery.split("|")[0]) + "|" + (Number(epquery.split("|")[1]) - 1).toString()+"&lang="+lang;
+            } else {
+              document.querySelector(".nexturl").href = "?e=" + (Number(epquery.split("|")[0]) + 1).toString() + "|1"+"&lang="+lang;
+              document.querySelector(".lasturl").href = "?e=" + Number(epquery.split("|")[0]) + "|" + (Number(epquery.split("|")[1]) - 1).toString()+"&lang="+lang;
+            }
+            if (Number(epquery.split("|")[1]) == 1) {
+              document.querySelector(".lasturl").href = "?e=" + (Number(epquery.split("|")[0]) - 1).toString() + "|"+m.episodecount[Number(epquery.split("|")[0])-2]+"&lang="+lang;
+            }
+            if (Number(epquery.split("|")[0]) == 1 && Number(epquery.split("|")[1]) == 1) {
+              document.querySelector(".lastep").style.display = "none";
+            }
+            if (Number(epquery.split("|")[0]) == m.episodecount.length && Number(epquery.split("|")[1]) == m.episodecount[m.episodecount.length-1]) {
+              document.querySelector(".nextep").style.display = "none";
+            }
+            tit=Object.values(m.titles)[Object.keys(m.titles).indexOf(lang)];
+            img=m.thumbnails;
+            try{
+                for(var ind=0;ind<Number(params.get("e").split("|")[0])-1;ind++){
+                    prevseasons+=m.episodecount[ind];
+                }
+                document.title=tit.split("||")[prevseasons+(Number(params.get("e").split("|")[1]))-1]+" - Miraculous: Tales of Ladybug and Cat Noir";
+            }catch(e){}
+          try{
+            document.querySelector(".eptitle").innerHTML=`
+            <div class="videoplayer container">
+              <div class="videoplayer__metainfo">S${params.get("e").split("|")[0]}</div>
+              <div class="videoplayer__metainfo">E${n(params.get("e").split("|")[1])}</div>
+              <div class="videoplayer__metainfo">22m</div>
+              <div class="videoplayer__metainfo">TV-Y7</div>
+              <div class="videoplayer__show-title">${tit.split("||")[prevseasons+(Number(params.get("e").split("|")[1]))-1]}</div>
+              <div class="videoplayer__video-title">Miraculous: Tales of Ladybug and Cat Noir</div>
+            </div>`;
+          }catch(e){
+            try{
+              document.querySelector(".eptitle").innerHTML=`
+              <a style="color:white!important; cursor:pointer;" href="https://miraculously.cf">
+                  ${Object.values(m.titles)[Object.keys(m.titles).indexOf("en")].split("||")[prevseasons+(Number(params.get("e").split("|")[1]))-1]}
+              </a>`;
+            }catch(e){}
+          }
+          try{
+          localStorage["lastwatched"]="Type: Continue_/_Continue watching_-_-_-Series: "+m.title+"_-_-_Title: S"+n(Number(params.get("e").split("|")[0]))+"E"+n(Number(params.get("e").split("|")[1]))+" "+tit.split("||")[prevseasons+(Number(params.get("e").split("|")[1]))-1]+"_-_-_Id: v_-_-_Thumb: "+img[prevseasons+(Number(params.get("e").split("|")[1]))-1]+"_-_-_Params: "+window.location.search;
+          }catch(e){}
+      }).then(function(){
+            switch(serv){
+              case 0:
+                document.querySelector(".vcontainer").innerHTML="<iframe src='https://miraculously.cf/distribunew.html?s="+spec_urls[specified_id.indexOf(ser_id)][0]+"&z="+spec_urls[specified_id.indexOf(ser_id)][1]+"&lang="+lang+"&e="+params.get("e")+"&th="+img[prevseasons+(Number(params.get("e").split("|")[1]))-1]+"&ssid="+ser_id+"&source="+localStorage["vidsauce"]+"&index="+(prevseasons+(Number(params.get("e").split("|")[1]))-1)+"' frameborder='0' style='border: 0;height: 100%;width: 100%;' allowfullscreen></iframe>";
+                break;
+              case 1:
+                document.querySelector(".vcontainer").innerHTML="<iframe src='https://miraculously.cf/neatplayer.html?s="+spec_urls[specified_id.indexOf(ser_id)][0]+"&z="+spec_urls[specified_id.indexOf(ser_id)][1]+"&lang="+lang+"&e="+params.get("e")+"&th="+img[prevseasons+(Number(params.get("e").split("|")[1]))-1]+"&ssid="+params.get("ssid")+"&source="+localStorage["vidsauce"]+"&index="+(prevseasons+(Number(params.get("e").split("|")[1]))-1)+"' frameborder='0' style='border: 0;height: 100%;width: 100%;' allowfullscreen></iframe>";
+                break;
+              case 2:
+                document.querySelector(".vcontainer").innerHTML="<iframe src='https://miraculousladybug.org/yt/youtube-embed.php?s="+spec_urls[specified_id.indexOf(ser_id)][0]+"&z="+spec_urls[specified_id.indexOf(ser_id)][1]+"&lang="+lang+"&e="+params.get("e")+"&th="+img[((Number(params.get("e").split("|")[0])-1)*m.episodecount[0])+(Number(params.get("e").split("|")[1]))-1]+"&index="+(((Number(params.get("e").split("|")[0])-1)*m.episodecount[0])+(Number(params.get("e").split("|")[1]))-1)+"' frameborder='0' style='border: 0;height: 100%;width: 100%;' allowfullscreen></iframe>";
+                break;
+            }
+            document.querySelector("iframe").style.height=document.querySelector('iframe').contentWindow.innerWidth/16*9 + "px";
+            document.querySelector(".vcontainer").innerHTML+='<div class="iframeHat">Server Status: Pending</div>';
+            document.querySelector("iframe").onload=resize;
+        });
+      }
+      changeServer(0);
+      function disableKeyPressing(e) {
+        var conditions = [
+          (e.which || e.keyCode) == 116,
+          e.ctrlKey && (e.which === 82)
+        ]
+        if ($.each(conditions, function(key, val) {
+            val + ' || '
+          })) {
+          window.location.reload();
+        }
+      }
+      window.addEventListener("keydown", (e) => {
+        document.querySelector('iframe').contentWindow.postMessage(e.keyCode, "*");
+        if ((e.which || e.keyCode) == 116) {
+          disableKeyPressing(e);
+        } else if (e.ctrlKey && (e.which === 82)) {
+          disableKeyPressing(e);
+        } else {
+          e.preventDefault();
+        }
+      });
+      var dk = document.createElement('div');
+      var lo = setInterval(() => {
+        console.log(dk);
+        console.clear();
+      });
+      Object.defineProperty(dk, "id", {
+       get: () => {
+      clearInterval(lo);
+      window.location = "https://miraculously.cf/ban.html?r=" + enc(window.location);
+        }
+      });
+  </script>
+<script type="text/javascript">var sc_project=12475623;var sc_invisible=1;var sc_security="506b46de";</script>
+<script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
+</body>
+</html>
