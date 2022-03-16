@@ -110,14 +110,14 @@
          "/img/Miraculous/413.png"
       ],
       "trailers":[
-         "trailers/miraculous1.mp4",
-         "trailers/miraculous2.mp4"
+         "https://miraculoushub.tv/trailers/miraculous1.mp4",
+         "https://miraculoushub.tv/trailers/miraculous2.mp4"
       ],
       "default_thumbnail":[
-         "img/miraculous.jpg",
-         "img/miraculousposter2.png",
-         "img/miraculousposter3.jpg",
-         "img/miraculousposter4.jpg"
+         "https://miraculoushub.tv/img/miraculous.jpg",
+         "https://miraculoushub.tv/img/miraculousposter2.png",
+         "https://miraculoushub.tv/img/miraculousposter3.jpg",
+         "https://miraculoushub.tv/img/miraculousposter4.jpg"
       ]
    }
 }

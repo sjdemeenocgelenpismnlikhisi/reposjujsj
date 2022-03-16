@@ -14,7 +14,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <h1>
   <span class="intro">Thanks for using</span>
-  <span class="main" aria-label="boring" data-splitting>MiraculousTO</span>
+  <span class="main" aria-label="boring" data-splitting>MiraculousHUB</span>
 </h1>
 <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
 <script>

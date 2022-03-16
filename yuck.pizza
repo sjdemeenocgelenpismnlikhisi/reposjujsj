@@ -1,68 +1,68 @@
 [
     {
         "title":"Miraculous World: New York, United Heroez",
-        "thumbnails":["https://miraculoushub.tv/img/ny.png","https://miraculoushub.tv/img/ny2.png"],
-        "mainthumb":"https://miraculoushub.tv/img/ny.png",
-        "trailers":["https://miraculoushub.tv/trailers/ny.mp4","https://miraculoushub.tv/trailers/ny2.mp4"]
+        "thumbnails":["/img/ny.png","/img/ny2.png"],
+        "mainthumb":"/img/ny.png",
+        "trailers":["/trailers/ny.mp4","/trailers/ny2.mp4"]
     },
     {
         "title":"Tangled Before Ever After",
-        "thumbnails":["https://miraculoushub.tv/img/beforeeverafter.jfif","https://miraculoushub.tv/img/beforeeverafter2.jfif"],
-        "mainthumb":"https://miraculoushub.tv/img/beforeeverafter.jfif",
-        "trailers":["https://miraculoushub.tv/trailers/tangledb4.mp4","https://miraculoushub.tv/trailers/tangledb42.mp4"]
+        "thumbnails":["/img/beforeeverafter.jfif","/img/beforeeverafter2.jfif"],
+        "mainthumb":"/img/beforeeverafter.jfif",
+        "trailers":["/trailers/tangledb4.mp4","/trailers/tangledb42.mp4"]
     },
     {
         "title":"Soul (2020)",
-        "thumbnails":["https://miraculoushub.tv/img/Soul.jpeg","https://miraculoushub.tv/img/soul.jfif","https://miraculoushub.tv/img/soul2.jfif"],
-        "mainthumb":"https://miraculoushub.tv/img/Soul.jpeg",
-        "trailers":["https://miraculoushub.tv/trailers/Soul.mp4"]
+        "thumbnails":["/img/Soul.jpeg","/img/soul.jfif","/img/soul2.jfif"],
+        "mainthumb":"/img/Soul.jpeg",
+        "trailers":["/trailers/Soul.mp4"]
     },
     {
         "title":"Shortsgiving with Big City Greens",
-        "thumbnails":["https://miraculoushub.tv/img/shortsgiving.jpg"],
-        "mainthumb":"https://miraculoushub.tv/img/shortsgiving.jpg",
+        "thumbnails":["/img/shortsgiving.jpg"],
+        "mainthumb":"/img/shortsgiving.jpg",
         "trailers":[""]
     },
     {
         "title":"Big Hero 6",
-        "thumbnails":["https://miraculoushub.tv/thumbs/Movies/bh6.jpg","https://github.com/sus-pixel/thumbs/blob/main/Movies/bh61.jpg?raw=true","https://github.com/sus-pixel/thumbs/blob/main/Movies/bh62.jpg?raw=true","https://github.com/sus-pixel/thumbs/blob/main/Movies/bh63.jpg?raw=true","https://github.com/sus-pixel/thumbs/blob/main/Movies/bh64.jpg?raw=true","https://github.com/sus-pixel/thumbs/blob/main/Movies/bh65.jpg?raw=true"],
+        "thumbnails":["/thumbs/Movies/bh6.jpg","https://github.com/sus-pixel/thumbs/blob/main/Movies/bh61.jpg?raw=true","https://github.com/sus-pixel/thumbs/blob/main/Movies/bh62.jpg?raw=true","https://github.com/sus-pixel/thumbs/blob/main/Movies/bh63.jpg?raw=true","https://github.com/sus-pixel/thumbs/blob/main/Movies/bh64.jpg?raw=true","https://github.com/sus-pixel/thumbs/blob/main/Movies/bh65.jpg?raw=true"],
         "mainthumb":"https://github.com/sus-pixel/thumbs/blob/main/Movies/bh6.jpg?raw=true",
-        "trailers":["https://miraculoushub.tv/trailers/BigHero6.mp4"]
+        "trailers":["/trailers/BigHero6.mp4"]
     },
     {
         "title":"How To Train Your Dragon: Homecoming",
         "thumbnails":["https://github.com/sus-pixel/thumbs/blob/main/Movies/homecoming.png?raw=true","https://github.com/sus-pixel/thumbs/blob/main/Movies/homecoming1.png?raw=true","https://github.com/sus-pixel/thumbs/blob/main/Movies/homecoming2.png?raw=true","https://github.com/sus-pixel/thumbs/blob/main/Movies/homecoming3.png?raw=true"],
         "mainthumb":"https://github.com/sus-pixel/thumbs/blob/main/Movies/homecoming1.png?raw=true",
-        "trailers":["https://miraculoushub.tv/trailers/HTTYDhomecoming.mp4"]
+        "trailers":["/trailers/HTTYDhomecoming.mp4"]
     },
     {
         "title":"Raya and the Last Dragon",
-        "thumbnails":["https://miraculoushub.tv/thumbs/Movies/Raya.jfif","https://miraculoushub.tv/thumbs/Movies/Raya1.jfif"],
-        "mainthumb":"https://miraculoushub.tv/thumbs/Movies/Raya1.jfif",
+        "thumbnails":["/thumbs/Movies/Raya.jfif","/thumbs/Movies/Raya1.jfif"],
+        "mainthumb":"/thumbs/Movies/Raya1.jfif",
         "trailers":[""]
     },
     {
         "title":"How To Train Your Dragon 3 (2019)",
-        "thumbnails":["https://miraculoushub.tv/thumbs/Movies/httyd3.jpg","https://miraculoushub.tv/thumbs/Movies/httyd3p2.jpg"],
-        "mainthumb":"https://miraculoushub.tv/thumbs/Movies/httyd3.jpg",
+        "thumbnails":["/thumbs/Movies/httyd3.jpg","/thumbs/Movies/httyd3p2.jpg"],
+        "mainthumb":"/thumbs/Movies/httyd3.jpg",
         "trailers":[""]
     },
     {
         "title":"How To Train Your Dragon 2 (2014)",
-        "thumbnails":["https://miraculoushub.tv/thumbs/Movies/httyd2.jpg","https://miraculoushub.tv/thumbs/Movies/httyd2p2.jpg"],
-        "mainthumb":"https://miraculoushub.tv/thumbs/Movies/httyd2p2.jpg",
+        "thumbnails":["/thumbs/Movies/httyd2.jpg","/thumbs/Movies/httyd2p2.jpg"],
+        "mainthumb":"/thumbs/Movies/httyd2p2.jpg",
         "trailers":[""]
     },
     {
         "title":"How To Train Your Dragon (2010)",
-        "thumbnails":["https://miraculoushub.tv/thumbs/Movies/httyd.jpg","https://miraculoushub.tv/thumbs/Movies/httyd1.jpg"],
-        "mainthumb":"https://miraculoushub.tv/thumbs/Movies/httyd1.jpg",
+        "thumbnails":["/thumbs/Movies/httyd.jpg","/thumbs/Movies/httyd1.jpg"],
+        "mainthumb":"/thumbs/Movies/httyd1.jpg",
         "trailers":[""]
     },
     {
         "title":"Miraculous World Shanghai: The Legend of Lady Dragon",
-        "thumbnails":["https://miraculoushub.tv/img/Shanghai.jpg"],
-        "mainthumb":"https://miraculoushub.tv/img/Shanghai.jpg",
+        "thumbnails":["/img/Shanghai.jpg"],
+        "mainthumb":"/img/Shanghai.jpg",
         "trailers":[""]
     }
 ]
