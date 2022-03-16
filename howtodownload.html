@@ -1,0 +1,220 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+            body{
+                margin:0px;
+                background:rgb(2, 0, 56);
+                color:white;
+                font-family: 'Fjalla One', sans-serif;
+                text-align:center;
+            }
+            .h2{
+                font-size:22px;
+                font-weight:700;
+                /*line-height:40px;*/
+            }
+            .instructions{
+                text-align:left;
+                width:90%;
+                padding:5%;
+                padding-bottom:0;
+                margin:0;
+                background:rgba(2,0,56,1);
+                flex-basis: 50%;
+            }
+            .instruction{margin:4px;/*background:#228;*/width:25%;}
+            a, .as{color:#f80;}
+            .instalink{
+                color:white;
+                text-decoration:none;
+            }
+            .descript{
+                max-width:100%;
+                border-radius:5px;
+                box-shadow:0 0 20px 2px #555;
+            }
+            header{
+                height:250px;
+                width:100%;
+                background: rgb(2,0,36);
+                background: linear-gradient(-90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+                display:flex;
+                align-items:center;
+                justify-content:center;
+                user-select:none;
+            }
+            .dlbtn{
+                background:#f80;
+                border:none;
+                color:white;
+                font-weight:700;
+                font-size:12px;
+                padding:5px;
+                border-radius:5px;
+                cursor:pointer;
+            }
+            .firststagecomplete{
+                background: rgb(131,58,180);
+                background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+                padding:40px;
+            }
+            @media only screen and (min-width: 1300px) {
+                .instructions{
+                    display:none;
+                }
+                table{
+                    display:table!important;
+                }
+            }
+            @media only screen and (max-width: 1300px) {
+                .instructions{
+                    display:flex;
+                    flex-wrap:wrap;
+                }
+                .instruction{
+                    flex: 1 0 49%;
+                }
+            }
+            @media only screen and (max-width: 750px) {
+                .instructions{
+                    display:flex;
+                    flex-wrap:wrap;
+                }
+                .instruction{
+                    flex: 1 0 50%;
+                    margin-top:30px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div style="min-height:40px;display:flex;align-items:center;justify-content:center;background:#400">This method only works on devices and browsers that allows extensions</div>
+        <header>
+            <div>
+                Detailed guide on
+                <h1>How to download a video from <span class="as">MiraculousHub.ml</span></h1>
+            </div>
+        </header>
+        <h2 style="text-align:left;margin:0;padding:30px;padding-left:5%;background: rgba(29,59,163,1);background: linear-gradient(-90deg, rgba(2,0,36,1) 0%, rgba(29,59,163,1) 50%, rgba(29,39,133,1) 100%);">Installation:</h2>
+        <style type="text/css">
+        table{
+            table-layout: fixed;
+            width:90%;
+            margin-left:5%;
+            margin-top:20px;
+            margin-bottom:20px;
+            display:none;
+        }
+        .tg {border-collapse:collapse;border-spacing:0;}
+        .tg td{
+            font-size:14px;
+            overflow:hidden;padding:10px 5px;word-break:normal;}
+        .tg th{
+            font-size:16px;
+            font-weight:700;
+            overflow:hidden;
+            word-break:normal;
+        }
+        .tg1 th{
+            font-size:22px;
+            font-weight:700;
+            overflow:hidden;
+            word-break:normal;
+        }
+        .imagebulk td{text-align:center;}
+        a{cursor:pointer;text-decoration:underline;}
+        .tg td,
+        .tg th {text-align:left;vertical-align:top}
+        hr{color:rgba(255,255,255,0.2);background-color:rgba(255,255,255,0.2);border:1px solid rgba(255,255,255,0.2);}
+        </style>
+        <table class="tg tg1">
+        <thead>
+          <tr>
+            <th>1. Visit chrome://extensions</th>
+            <th>2. Check the developer mode checkbox</th>
+            <th>3. Download the <a onclick="dl()">extension (.zip)</a></th>
+            <th>4. Press "Load unpacked" and upload the folder you downloaded</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="w-content">
+            <td><hr>
+                (or an equivalent for your browser)
+            </td>
+            <td><hr>
+                This allows you to install an extension manually</td>
+            <td><hr>
+                <a onclick="dl()"><button class="dlbtn">Download</button></a> and then unzip the file on your device and extract the files as a folder</td>
+            <td><hr>
+                The button should be on the top left of the chrome://extensions page.</td>
+          </tr>
+          <tr class="imagebulk">
+            <td><hr><img class="descript" src="https://animatedshows.tk/img/chromeextensions.png">            </td>
+            <td><hr><img class="descript" src="https://animatedshows.tk/img/chromedevmode.png"></td>
+            <td><hr><img class="descript" src="https://animatedshows.tk/img/unzipping.png"></td>
+            <td><hr><img class="descript" src="https://animatedshows.tk/img/chromeloadunpacked.png"></td>
+          </tr>
+        </tbody>
+        </table>
+        <div class="instructions">
+            <div class="instruction">
+                <span class="h2">1. Visit chrome://extensions</span><br><br>(or an equivalent for your browser)<br><br><img class="descript" src="https://animatedshows.tk/img/chromeextensions.png"><br><br>
+            </div>
+            <div class="instruction">
+                <span class="h2">2. Check the developer mode checkbox</span><br><br>This allows you to install an extension manually<br><br><img class="descript" src="https://animatedshows.tk/img/chromedevmode.png"><br><br><br>
+            </div>
+            <div class="instruction">
+                <span class="h2">3. Download the <a onclick="dl()">extension (.zip)</a></span><br><br><a onclick="dl()"><button class="dlbtn">Download</button></a> and then unzip the file on your device and extract the files as a folder<br><br><img class="descript" src="https://animatedshows.tk/img/unzipping.png"><br><br><br>
+            </div>
+            <div class="instruction">
+                <span class="h2">4. Press "Load unpacked" and upload the folder you downloaded</span><br><br>The button should be on the top left of the chrome://extensions page.<br><br><img class="descript" src="https://animatedshows.tk/img/chromeloadunpacked.png"><br><br><br>
+            </div>
+        </div>
+        <div class="firststagecomplete">
+        Did you get through that just fine? You're all set up now!
+        </div>
+        <h2 style="text-align:left;margin:0;padding:30px;padding-left:5%;background: rgba(29,59,163,1);background: linear-gradient(-90deg, rgba(2,0,36,1) 0%, rgba(29,59,163,1) 50%, rgba(29,39,133,1) 100%);">Usage:</h2>
+        <table class="tg">
+        <thead>
+          <tr>
+            <th>1. Go to a video on <span class="as">MiraculousHub</span></th>
+            <th>2. Click on the extension</th>
+            <th>3. Wait for the video processing to complete...</th>
+            <th>4. Press "Save"</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><hr>
+                The red dot inside the extension should get a little bit bigger<br><br><img class="descript" src="">
+            </td>
+            <td><hr>
+                This will open a downloader viewport page in a new tab.<br><br><img class="descript" src=""></td>
+            <td><hr>
+                Basically what is happening here is that the extension is recording the video chunks that make up an episode and pieces them together<br><br><img class="descript" src="">
+            </td>
+            <td><hr>
+                on the video processing page & choose the location for the download of your file<br><br><img class="descript" src="">
+            </td>
+          </tr>
+        </tbody>
+        </table>
+        <div class="instructions">
+            <div class="instruction">
+                <span class="h2">1. Go to a video on <span class="as">MiraculousHub</span></span><br><br>The red dot inside the extension should get a little bit bigger<br><br><img class="descript" src=""><br><br>
+            </div>
+            <div class="instruction">
+                <span class="h2">2. Click on the extension</span><br><br>This will open a downloader viewport page in a new tab.<br><br><img class="descript" src=""><br><br><br>
+            </div>
+            <div class="instruction">
+                <span class="h2">3. Wait for the video processing to complete...</span><br><br>Basically what is happening here is that the extension is recording the video chunks that make up an episode and pieces them together<br><br><img class="descript" src=""><br><br><br>
+            </div>
+            <div class="instruction">
+                <span class="h2">4. Press "Save"</span><br><br>on the video processing page & choose the location for the download of your file<br><br><img class="descript" src=""><br><br><br>
+            </div>
+        </div>
+        <script>function dl(){window.location="https://github.com/WayzzEpisodes/mlly/blob/main/download.zip?raw=true";}</script>
+    </body>
+</html>
